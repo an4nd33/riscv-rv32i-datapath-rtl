@@ -1,39 +1,63 @@
-# RISC-V RV32I Datapath RTL Design (Ongoing)
+# 📘 RV32I RTL-to-GDS Flow
 
-## Project Status
-🚧 This is an ongoing group project as part of M.Tech coursework.
-This repository contains the **datapath design** handled by me.
+## 📌 Overview
+This repository implements a **RISC-V RV32I processor** and demonstrates a complete **RTL-to-GDSII ASIC design flow**, covering front-end design, verification, synthesis, and physical design.
 
-## Overview
-This project focuses on the RTL design of the **datapath** of a
-single-cycle RISC-V RV32I processor. The control unit and memory
-subsystems are handled by other team members.
+The project focuses on building a synthesizable RV32I core and taking it through industry-standard VLSI stages including:
+- RTL Design (Verilog/SystemVerilog)
+- Functional Verification (Testbench / UVM)
+- Logic Synthesis
+- Power Intent Integration (UPF)
+- Physical Design (PnR)
+- Power & Timing Analysis
 
-## My Contribution
-- RTL design of RISC-V datapath
-- ALU implementation
-- Register file design
-- Immediate generator
-- Integration of datapath modules
+---
 
-## Architecture
-The datapath supports RV32I instructions including:
-- R-type
-- I-type
-- Load/Store
-- Branch instructions
+## 🎯 Objectives
+- Design a modular **RV32I processor**
+- Verify functionality using SystemVerilog/UVM
+- Implement low-power techniques (UPF / multi-voltage domains)
+- Generate gate-level netlist and final GDSII
+- Perform timing, power, and physical verification
 
-## Tools Used
-- Verilog HDL
-- ModelSim / QuestaSim (for simulation)
+---
 
-## Current Progress
-- Datapath block-level design completed
-- RTL coding in progress
-- Unit-level verification ongoing
+## 🧱 Design Architecture
+The processor consists of the following key blocks:
 
-## Planned Work
-- Integration with control unit
-- Full SoC synthesis
-- Timing analysis
+- Program Counter (PC)
+- Instruction Memory
+- Register File
+- ALU (Arithmetic Logic Unit)
+- Control Unit
+- Data Memory
+- Datapath / Pipeline logic (if applicable)
+
+---
+
+---
+
+## ⚙️ Tools & Technologies
+
+### Design & Simulation
+- Verilog / SystemVerilog  
+- VCS / Icarus Verilog / Questa  
+- GTKWave  
+
+### Synthesis
+- Synopsys Design Compiler / Yosys  
+
+### Physical Design
+- ICC2 / OpenLane  
+- Magic  
+
+### Verification
+- UVM  
+
+### Power Analysis
+- UPF  
+- PrimeTime PX / OpenROAD  
+
+---
+
 
